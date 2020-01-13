@@ -4,11 +4,20 @@ jrnl
 # To add <entry> to default jrnl:
 jrnl <entry>
 
+# To add date and time to it
+jrnl today at 3am: I was in a club
+
+# To view last 10 tags
+jrnl -n 10
+
+# To mark a entry as favorite use *
+jrnl last sunday *: Best day of my life
+
 # To list of tags:
 jrnl --tags
 
-# To entries per tag:
-jrnl @tag
+# To filter entries with tag:
+jrnl -n 5 -and @tag1 @tag2
 
 # To export jrnl as json:
 jrnl --export json
