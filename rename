@@ -3,3 +3,13 @@ rename 'y/A-Z/a-z/' *
 
 # To replace 'sometext' with 'replacedby' in all files in current directory:
 rename 's/sometext/replacedby/' *
+
+# Rename all jpeg files to jpg files
+rename 's/.jpeg/.jpg/' *.jpeg
+
+# Change the case of files
+rename 's/a-z/A-Z/' *.jpeg
+
+# Other options 
+* -n (noop) - Use this option to check the output without making any changes
+* -v (verbose) - Print the name of files successfully renamed

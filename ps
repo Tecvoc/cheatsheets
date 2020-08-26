@@ -1,14 +1,27 @@
 # To list every process on the system:
 ps aux
 
-# To list a process tree:
+# To list a process tree, -a flag stands for all current processes, -x will display all processes even those not associated with the current tty
 ps axjf
 
-# To list every process owned by foouser:
-ps -aufoouser
+# To list every process owned by foouser, here u isthe bsd format:
+ps -au foouser
+
+# To get the threads of a process use -L
+ps -aL 
 
 # To list every process with a user-defined format:
-ps -eo pid,user,command
+ps -o pid,user,command
+
+# To get the pid of a process do
+ps -C process_name
+
+# Once the pid is known, we can get further details by using, to get the command name use -c
+ps -L -c -p pid_value
+ps -p pid_val1,pid_val2,pid_val3
+
+# To get parent process along with all forked child process, do
+ps -f --forest -C bash
 
 # Exclude grep from your grepped output of ps.
 # Add [] to the first letter. Ex: sshd -> [s]shd
