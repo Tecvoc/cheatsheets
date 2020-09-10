@@ -46,3 +46,7 @@ grep --exclude-dir="staticfolder" --exclude-dir="venv" 'debugger' -r .
 
 # To match the whole pattern use -w
 grep -w "pattern" .
+
+# To use the perl syntax use -P, -o flag prints only the matching chars
+# This does a positive lookbehind for e with llo following it
+echo "hello"| grep -o -P '(?<=e)llo'
